@@ -1,0 +1,56 @@
+OVERVIEW:
+
+FaCiLe is a Functional Constraint Library implemented in Objective Caml.
+
+CONTENTS:
+
+  README        this file
+  Makefile      main Makefile
+  src/          source files of the library
+  examples/     some examples using the library
+
+INSTALLATION:
+
+  All you need is the Objective Caml 3.02 (or greater) compiler and
+standard Unix tools (make...).
+
+  0) Configure the library. The single option of configuration is the
+directory you want to put the library files in (facile.cma, facile.cmxa,
+facile.a facile.cmi). Default is the subdirectory "facile" of the Ocaml
+library directory (returned by "ocamlc -where").
+
+	./configure [--faciledir <target directory>]
+
+  1) First compile the library with a simple
+
+        make
+
+  2) Check the result
+
+        make check
+
+     You should get a solution for the 8 queens problem.
+
+  3) Then install the library with a (usually as root)
+
+        make install
+
+DOCUMENTATION
+
+  The documentation is available as Postscript and PDF format and as a bundle
+of HTML files. It also can be found online at the web site:
+
+        http://www.recherche.enac.fr/opti/facile/doc
+
+AVAILABILITY:
+
+  The package and the documentation are available at:
+
+	http://www.recherche.enac.fr/opti/facile/distrib
+
+BUG REPORTS AND USER FEEDBACK:
+
+Send bug reports by E-mail to:
+
+              facile@recherche.enac.fr
+

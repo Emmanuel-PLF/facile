@@ -1,0 +1,13 @@
+/.git
+*.opt
+*.out
+*.cma
+*.cmxa
+*.cmo
+*.cmi
+*.cmt
+*.cmti
+*.cmx
+*.a
+*.o
+.depend

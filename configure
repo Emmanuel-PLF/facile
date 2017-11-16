@@ -1,0 +1,37 @@
+#! /bin/sh
+
+# $Id: configure,v 1.7 2004/07/02 09:58:47 barnier Exp $
+
+# Checking for ocaml >= $ocaml_min_version (i.e. with -where option and
+# compilation of or-patterns fixed)
+
+ocaml_min_version=3.02
+echo "Checking for OCaml compiler (>= ${ocaml_min_version})..."
+if expr `ocamlc -version` \>\= $ocaml_min_version >/dev/null 2>&1; then
+    version=`ocamlc -version`
+    echo "OCaml $version found"
+else
+    echo "Aborting... OCaml compiler is either missing or too old"
+    exit 1
+fi
+
+
+# Default place for facile in OCaml library directory
+faciledir=`ocamlc -where`/facile
+
+# Parse command-line arguments
+
+while : ; do
+  case "$1" in
+    "") break;;
+    -faciledir|--faciledir)
+        faciledir=$2; shift;;
+    *) echo "Unknown option \"$1\"." 1>&2; exit 2;;
+  esac
+  shift
+done
+
+# Generates config_Makefile
+
+echo FACILEDIR=$faciledir > config_Makefile
+echo FaCiLe directory: $faciledir
