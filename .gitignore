@@ -1,4 +1,6 @@
 /.git
+/_build
+.merlin
 *.opt
 *.out
 *.cma

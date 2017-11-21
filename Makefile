@@ -3,7 +3,7 @@
 include config_Makefile
 
 compile:
-	cd src; make
+	jbuilder build --dev
 
 install:
 	if test -d $(FACILEDIR); then : ; else mkdir $(FACILEDIR); fi
