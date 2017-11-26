@@ -4,10 +4,9 @@ FaCiLe is a Functional Constraint Library implemented in Objective Caml.
 
 ### CONTENTS:
 
-  README        this file
-  Makefile      main Makefile
-  src/          source files of the library
-  examples/     some examples using the library
+  *README        this file
+  *lib/          source files of the library
+  *examples/     some examples using the library
 
 ### INSTALLATION:
 
