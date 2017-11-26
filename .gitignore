@@ -1,5 +1,4 @@
-.git
-_build
+_build/
 .merlin
 *.install
 *.depend
