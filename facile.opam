@@ -1,5 +1,6 @@
 opam-version: "1.2"
 maintainer: "Emmanuel PINEAU <epineau49.dev@gmail.com>"
+homepage: "http://opti.recherche.enac.fr/facile"
 authors: [ "ENAC <facile@recherche.enac.fr>" ]
 
 build: [
