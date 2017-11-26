@@ -1,0 +1,14 @@
+opam-version: "1.2"
+maintainer: "Emmanuel PINEAU <epineau49.dev@gmail.com>"
+authors: [ "ENAC <facile@recherche.enac.fr>" ]
+
+build: [
+  ["jbuilder" "build" "-p" name "-j" jobs]
+]
+build-test: [
+  ["jbuilder" "runtest" "-p" name]
+]
+depends: [
+  "jbuilder" {build & >= "1.0+beta10"}
+]
+available: [ ocaml-version >= "4.01.0" ]
