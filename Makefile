@@ -1,25 +1,21 @@
 # $Id: release_Makefile,v 1.7 2003/05/15 09:13:16 brisset Exp $
+.PHONY: build clean test
 
 include config_Makefile
 
-compile:
-	jbuilder build --dev
+build:
+	jbuilder build @install --dev
 
 install:
-	if test -d $(FACILEDIR); then : ; else mkdir $(FACILEDIR); fi
-	cp src/facile.cmi src/facile.cma src/facile.cmxa src/facile.a $(FACILEDIR)
-	chmod a+r $(FACILEDIR)/facile.cmi
-	chmod a+r $(FACILEDIR)/facile.cma
-	chmod a+r $(FACILEDIR)/facile.cmxa
-	chmod a+r $(FACILEDIR)/facile.a
+	jbuilder install
 
 clean:
-	cd src; make clean
+	jbuilder clean
 
 distclean uninstall:
-	rm -fr $(FACILEDIR)
+	jbuilder uninstall
 
 check:
-	cd examples; make FACILEDIR=../src queens.opt; ./queens.opt 8
+	cd examples; make FACILEDIR=../src queens.opt; ./queens.opt
 test:
-	cd examples; make FACILEDIR=../src golf.opt
+	jbuilder runtest
