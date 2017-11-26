@@ -2,6 +2,8 @@ opam-version: "1.2"
 maintainer: "Emmanuel PINEAU <epineau49.dev@gmail.com>"
 homepage: "http://opti.recherche.enac.fr/facile"
 authors: [ "ENAC <facile@recherche.enac.fr>" ]
+bug-reports: "facile@recherche.enac.fr"
+dev-repo: "https://github.com/Emmanuel-PLF/facile.git"
 
 build: [
   ["jbuilder" "build" "-p" name "-j" jobs]
@@ -12,4 +14,4 @@ build-test: [
 depends: [
   "jbuilder" {build & >= "1.0+beta10"}
 ]
-available: [ ocaml-version >= "4.01.0" ]
+available: [ ocaml-version >= "4.03.0" ]
