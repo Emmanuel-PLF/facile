@@ -15,4 +15,4 @@ uninstall:
 	jbuilder uninstall
 
 clean:
-rm -rf _build *.install
+	rm -rf _build *.install
