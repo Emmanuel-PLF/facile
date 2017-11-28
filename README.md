@@ -11,11 +11,12 @@ FaCiLe is a Functional Constraint Library implemented in Objective Caml.
 
 ### INSTALLATION:
 
-  All you need is the Objective Caml 3.02 (or greater) compiler and
+  All you need is the Objective Caml 4.03 (or greater) compiler and
 standard Unix tools (make...).
 
+```bash
   opam install facile
-
+```
 ### DOCUMENTATION
 
   The documentation is available as Postscript and PDF format and as a bundle
