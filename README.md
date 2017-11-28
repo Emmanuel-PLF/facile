@@ -22,16 +22,16 @@ standard Unix tools (make...).
   The documentation is available as Postscript and PDF format and as a bundle
 of HTML files. It also can be found online at the web site:
 
-        http://www.recherche.enac.fr/opti/facile/doc
+        http://opti.recherche.enac.fr/facile/doc
 
 ### AVAILABILITY:
 
   The package and the documentation are available at:
 
-	http://www.recherche.enac.fr/opti/facile/distrib
+	      http://opti.recherche.enac.fr/facile/distrib
 
 BUG REPORTS AND USER FEEDBACK:
 
 Send bug reports by E-mail to:
 
-              facile@recherche.enac.fr
+        facile@recherche.enac.fr
