@@ -1,5 +1,3 @@
-### OVERVIEW:
-
 FaCiLe is a Functional Constraint Library implemented in Objective Caml.
 
 ### CONTENTS:
