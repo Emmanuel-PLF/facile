@@ -6,6 +6,7 @@ bug-reports: "https://github.com/Emmanuel-PLF/facile-fork/issues"
 dev-repo: "https://github.com/Emmanuel-PLF/facile.git"
 
 build: [
+  [ "jbuilder" "subst"] {pinned}
   ["jbuilder" "build" "-p" name "-j" jobs]
 ]
 build-test: [
