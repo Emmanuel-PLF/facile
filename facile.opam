@@ -1,6 +1,6 @@
 opam-version: "1.2"
 maintainer: "Emmanuel PINEAU <epineau49.dev@gmail.com>"
-homepage: "http://opti.recherche.enac.fr/facile"
+homepage: "https://github.com/Emmanuel-PLF/facile"
 authors: [ "ENAC <facile@recherche.enac.fr>" ]
 bug-reports: "https://github.com/Emmanuel-PLF/facile/issues"
 dev-repo: "https://github.com/Emmanuel-PLF/facile.git"
