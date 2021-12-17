@@ -97,7 +97,7 @@ let update_r a =
     true
   with Exit -> (* Copy release_dates in [r] and do updates directly in [a] *)
     let r = Array.map T.release_date a in (* 1..3 *)
-    let c = Array.create n 0 in 
+    let c = Array.make n 0 in 
     for k = 0 to n-1 do (* 4..29 *)
       let pp = ref 0
       and cc = ref min_int in
@@ -133,7 +133,7 @@ let update_d a =
   (* Check done ONLY in update_r *)
   (* Copy deadlines in [d] and do updates directly in [a] *)
   let d = Array.map T.deadline a in (* 1..3 *)
-  let c = Array.create n 0 in 
+  let c = Array.make n 0 in 
   for k = n-1 downto 0 do (* 4..29 *)
     let pp = ref 0
     and cc = ref max_int in

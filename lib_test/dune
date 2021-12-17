@@ -1,0 +1,9 @@
+(executables
+ (libraries facile)
+ (modules queens)
+ (names queens))
+
+(rule
+ (alias    runtest)
+ ; (deps    (queens.exe))
+ (action  (run ./queens.exe 8)))
