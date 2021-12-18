@@ -355,7 +355,7 @@ let sortp a =
   else
     let inf, sup =
       Array.fold_left
-      	(fun (inf, sup) x -> Pervasives.min (Fd.min x) inf, Pervasives.max (Fd.max x) sup) (max_int, min_int) a in
+      	(fun (inf, sup) x -> Stdlib.min (Fd.min x) inf, Stdlib.max (Fd.max x) sup) (max_int, min_int) a in
     let d = Fd.array n inf sup
     and p = Fd.array n 0 (n - 1) in
     Fcl_cstr.post (cstr a ~p:(Some p) d);
@@ -368,7 +368,7 @@ let sort a =
   else
     let inf, sup =
       Array.fold_left
-      	(fun (inf, sup) x -> Pervasives.min (Fd.min x) inf, Pervasives.max (Fd.max x) sup) (max_int, min_int) a in
+      	(fun (inf, sup) x -> Stdlib.min (Fd.min x) inf, Stdlib.max (Fd.max x) sup) (max_int, min_int) a in
     let d = Fd.array n inf sup in
     Fcl_cstr.post (cstr a d);
     d;;
