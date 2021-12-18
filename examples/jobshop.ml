@@ -33,8 +33,8 @@ let js file =
   let nb_job = Array.length duration 
   and nb_task = Array.length duration.(0) in
   let horizon = Array.fold_left (Array.fold_left (+)) 0 duration in
-  let machs = Array.create nb_task []
-  and sums = Array.create nb_task 0 in
+  let machs = Array.make nb_task []
+  and sums = Array.make nb_task 0 in
   let a =
     Array.mapi
       (fun i jobi ->
