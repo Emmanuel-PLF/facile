@@ -77,7 +77,7 @@ let js file =
     List.fold_left (fun r a -> min r (T.release_date a)) max_int machs.(i) in
 
   let ranked = Array.init nb_task (fun _ -> Stak.ref false) in
-  let most_critical schedules =
+  let most_critical _schedules =
     let best = ref (-1) and slack_best = ref max_int in
     for i = 0 to nb_task - 1 do
       if not (Stak.get ranked.(i)) then
