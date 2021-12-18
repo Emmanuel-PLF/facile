@@ -33,8 +33,8 @@ let js file =
   let nb_job = Array.length duration 
   and nb_task = Array.length duration.(0) in
   let horizon = Array.fold_left (Array.fold_left (+)) 0 duration in
-  let machs = Array.create nb_task []
-  and sums = Array.create nb_task 0 in
+  let machs = Array.make nb_task []
+  and sums = Array.make nb_task 0 in
   let a =
     Array.mapi
       (fun i jobi ->
@@ -77,7 +77,7 @@ let js file =
     List.fold_left (fun r a -> min r (T.release_date a)) max_int machs.(i) in
 
   let ranked = Array.init nb_task (fun _ -> Stak.ref false) in
-  let most_critical schedules =
+  let most_critical _schedules =
     let best = ref (-1) and slack_best = ref max_int in
     for i = 0 to nb_task - 1 do
       if not (Stak.get ranked.(i)) then

@@ -1,0 +1,5 @@
+(library
+ (public_name facile)
+ (libraries stdlib-shims)
+ (ocamlopt_flags (-unsafe -noassert -inline 10))
+)

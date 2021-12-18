@@ -1,0 +1,3 @@
+(executables
+  (libraries facile)
+  (names coins golf golomb jobshop magic marriage prolog seven_eleven tiles))
