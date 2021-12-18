@@ -26,38 +26,11 @@ and efficient language.
 
 ### INSTALLATION:
 
-  All you need is the Objective Caml 4.03 (or greater) compiler and dune.
+  All you need is the Objective Caml 4.03 (or greater) compiler and jbuilder.
 
 ```bash
   opam install facile
 ```
-
-### RUNNING TESTS
-
-```bash
-  make test
-```
-
-or 
-
-```bash
-  dune runtest
-```
-
-### RUNNING EXAMPLES
-
-Examples are in examples/ directory.
-
-To run an example program named `example_name` which does need no argument:
-```bash
-  dune exec examples/example_name.exe
-```
-
-To run an example program named `example_name` which does need arguments:
-```bash
-  dune exec examples/example_name.exe -- arg1 arg2
-```
-
 ### DOCUMENTATION
 
   The documentation is available as Postscript and PDF format and as a bundle

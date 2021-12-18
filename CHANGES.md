@@ -1,6 +1,3 @@
-### 1.2 (2021-12-17)
-  * Switched to dune
-  
 ### 1.1.4 (2017-11-29)
 
   * Switched to jbuilder

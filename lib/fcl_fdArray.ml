@@ -299,7 +299,7 @@ let get array index =
       let (mi, ma) =
       	Array.fold_left
 	  (fun (mi, ma) e ->
-	    (Stdlib.min mi (Fd.min e), Stdlib.max ma (Fd.max e)))
+	    (Pervasives.min mi (Fd.min e), Pervasives.max ma (Fd.max e)))
 	  (max_int, min_int) array in
       if mi = ma then Fd.int mi else
       let value = Fd.create (Fcl_domain.interval mi ma) in

@@ -1,21 +1,18 @@
-opam-version: "2.0"
+opam-version: "1.2"
 maintainer: "Emmanuel PINEAU <epineau49.dev@gmail.com>"
 homepage: "https://github.com/Emmanuel-PLF/facile"
 authors: [ "ENAC <facile@recherche.enac.fr>" ]
 bug-reports: "https://github.com/Emmanuel-PLF/facile/issues"
 dev-repo: "https://github.com/Emmanuel-PLF/facile.git"
-name: "facile"
-version: "1.2"
 
 build: [
-  [ "dune" "subst"] {pinned}
-  ["dune" "build" "-p" name "-j" jobs]
+  [ "jbuilder" "subst"] {pinned}
+  ["jbuilder" "build" "-p" name "-j" jobs]
 ]
 build-test: [
-  ["dune" "runtest" "-p" name]
+  ["jbuilder" "runtest" "-p" name]
 ]
 depends: [
-  "dune" {build & >= "2.0.0"}
-  "stdlib-shims"
+  "jbuilder" {build & >= "1.0+beta10"}
 ]
 available: [ ocaml-version >= "4.03.0" ]

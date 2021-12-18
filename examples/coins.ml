@@ -39,7 +39,7 @@ let coins values max =
 	nb_coins) in
 
   (* Cost: nb of coins *)
-  let _cost = Arith.e2fd (Arith.sum_fd nb_min_coins) in
+  let cost = Arith.e2fd (Arith.sum_fd nb_min_coins) in
   let cost = Fd.interval 0 max in
   Cstr.post (fd2e cost =~ Arith.sum_fd nb_min_coins);
 

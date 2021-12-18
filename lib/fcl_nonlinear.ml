@@ -274,7 +274,7 @@ let min_max_of_div_for_div a b z =
 let min_max_of_remainder x y =
   let r_abs_max =
     let min_y, max_y = Fd.min_max y in
-    max (Stdlib.abs min_y) (Stdlib.abs max_y) - 1 in
+    max (Pervasives.abs min_y) (Pervasives.abs max_y) - 1 in
   if Fd.min x >= 0 then (0, r_abs_max)
   else if Fd.max x <= 0 then ((0 - r_abs_max), 0)
   else ((0 - r_abs_max), r_abs_max)

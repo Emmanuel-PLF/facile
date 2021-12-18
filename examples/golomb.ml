@@ -28,7 +28,7 @@ let golomb n =
   let n2 = (truncate (2.**float n))
   and dummy = Fd.int 0 in
   let ticks = Fd.array n 0 n2 
-  and dists = Array.make ((n*(n-1))/2) dummy in
+  and dists = Array.create ((n*(n-1))/2) dummy in
 
   (* Constraints *)
   Fd.unify ticks.(0) 0; (* First tick at the start of the ruler *)

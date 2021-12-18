@@ -50,9 +50,9 @@ module Operators = struct
     x - y
 *)
 
-  let (+) = Stdlib.(+)
-  let (-) = Stdlib.(-)
-  let ( * ) = Stdlib.( * )
+  let (+) = Pervasives.(+)
+  let (-) = Pervasives.(-)
+  let ( * ) = Pervasives.( * )
 
   let (=+) x y = x := !x + y
   let (=+.) x y = x := !x +. y

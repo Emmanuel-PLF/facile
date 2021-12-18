@@ -1,19 +1,18 @@
 .PHONY: all build clean test
 
 build:
-	dune build @install
+	jbuilder build --dev @install
 
-all:
-	dune build
+all: build
 
 test:
-	dune runtest
+	jbuilder runtest --dev
 
 install:
-	dune install
+	jbuilder install --dev
 
 uninstall:
-	dune uninstall
+	jbuilder uninstall
 
 clean:
 	rm -rf _build *.install
