@@ -50,7 +50,7 @@ let create ?(name = "anonymous") ?(nb_wakings = 1) ?fprint ?(priority = normal) 
   and nb_solved = Fcl_stak.ref 0 in
   let update i =
     if update i then
-      if Pervasives.not solved.(i) then begin
+      if Stdlib.not solved.(i) then begin
        	Fcl_stak.set nb_solved (Fcl_stak.get nb_solved + 1);
        	array_set_true solved i
       end in
