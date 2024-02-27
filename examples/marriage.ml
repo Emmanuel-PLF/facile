@@ -43,12 +43,12 @@ let rankMen =
 let ai2e = Array.map i2e
 
 let go () =
-  let one_wife _ = Fd.create (Domain.interval 0 (Array.length women - 1))
-  and one_husband _ = Fd.create (Domain.interval 0 (Array.length men - 1)) in
+  let _one_wife _ = Fd.create (Domain.interval 0 (Array.length women - 1))
+  and _one_husband _ = Fd.create (Domain.interval 0 (Array.length men - 1)) in
   let wife = Fd.array n 0 (n-1)
   and husband = Fd.array n 0 (n-1) in
-  let wifee = Array.map fd2e wife
-  and husbande = Array.map fd2e husband in
+  let _wifee = Array.map fd2e wife
+  and _husbande = Array.map fd2e husband in
 
   Array.iter (fun m ->
     Cstr.post (fd2e (FdArray.get husband (Array.get wife m)) =~ i2e m)) men;
